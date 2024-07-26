@@ -1,0 +1,244 @@
+* {
+    font-family: 'Ubuntu';
+}
+
+#drawer .tour-drawer {
+    border-left: 1px solid #793197;
+    border-right: 1px solid #793197;
+    border-top: 1px solid #793197;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: #fff;
+    left: calc(50vw - 515px);
+    width: 277px;
+    height: 303px;
+    bottom: 28px;
+    position: fixed;
+    z-index: 5;
+    -webkit-transform: translateZ(0);
+    box-shadow: 2px 2px 20px 0 rgba(59, 67, 83, 0.30), 0px -4px 8px 0px rgba(176, 161, 161, 0.25) inset;
+}
+
+#drawer .drawer-header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 86px;
+    border-bottom: 1px solid #BBBBBB;
+    background-color: #FEFAFF;
+    z-index: 6;
+    border-radius: 4px 4px 0 0;
+}
+
+#container #drawer .minimize-drawer {
+    height: 86px !important;
+}
+
+#container #drawer .minimize-drawer-header {
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 1px solid var(--Boto-inativo, #CACACA);
+    background: #FFF;
+}
+
+#drawer .drawer-vector-wrapper {
+    margin-left: 17px;
+}
+
+#drawer .confeti-image-drawer {
+    width: 61px;
+    height: 61px;
+    position: relative;
+    left: 110px;
+    padding-top: 11px;
+}
+
+#drawer .confeti-image-drawer img {
+    width: 60px;
+}
+
+#drawer #drawerDrop.spin {
+    transform: rotate(180deg);
+}
+
+#drawer .drawer-start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 19px;
+    padding-left: 18px;
+    z-index: 7;
+}
+
+#drawer .drawer-start-text, .drawer-progress-text {
+    font-size: 14px;
+    color: #793197E5;
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-heght: normal;
+}
+
+#drawer .drawer-percentage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 13px;
+    padding-left: 19px;
+}
+
+#drawer .drawer-progress-text {
+    font-weight: bold;
+}
+
+#drawer .drawer-trophy {
+    width: 30px;
+    height: 30px;
+}
+
+#drawer .drawer-drop {
+    width: 25px;
+    height: 25px;
+}
+
+#drawer .drawer-progress {
+    appearance: none;
+    width: 183px;
+    height: 6px;
+}
+
+#drawer .drawer-progress::-webkit-progress-value {
+    background-color: #793197;
+    border-radius: 50px;
+}
+
+#drawer .drawer-progress::-webkit-progress-bar {
+    background-color: rgba(121, 49, 151, 0.30);
+    border-radius: 50px;
+}
+
+#drawer .drawer-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 246px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, display 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+
+#drawer .drawer-body.hide {
+    opacity: 0;
+    display: none;
+}
+
+#drawer .drawer-center {
+    justify-content: normal;
+    align-items: center;
+    gap: 21px;
+}
+
+#drawer .drawer-complete-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#drawer .drawer-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+#drawer .drawer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background-color: #17BC14;
+    border-radius: 50%;
+    border: 2.5px solid #17BC14;
+}
+
+#drawer .drawer-circle-deact {
+    background-color: #FFFFFF;
+    border: 2.5px solid #696969;
+}
+
+#drawer .drawer-vector-deact {
+    display: none;
+}
+
+#drawer .drawer-text {
+    font-size: 14px;
+    color: #696969;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: strikethrough;
+    width: 199px;
+}
+
+#drawer .drawer-text-complete {
+    text-decoration: line-through;
+}
+
+#drawer .drawer-complete-p {
+    width: 218px;
+    position: relative;
+    left: 28px;
+    padding-top: 22px;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 14px;
+    color: #793197;
+}
+
+.tour-finish-go {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    width: 170px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: #CACACA;
+    border: 1px solid #ADADAD;
+    border-bottom: 3px solid #ADADAD;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#drawer .drawer-complete-button {
+    background-color: #17BC14;
+    border-color: #0A5908;
+    cursor: pointer;
+    left: 52px;
+    position: relative;    font-size: 19px;
+    font-family: 'Ubuntu';
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/** displays */
+.display-flex {
+    display: flex;
+}
+
+/** sizes */
+.size-24x24 {
+    width: 24px;
+    height: 24px;
+}
