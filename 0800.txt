@@ -1,0 +1,9 @@
+git clone https://github.com/marialuizaspada/TI-Maria.git
+
+git config --global user.name "marialuizaspada"
+git config --global user.email "mariaspadasesi@gmail.com"
+
+
+git add .
+git commit -m "meu comentario"
+git push -u origin main
