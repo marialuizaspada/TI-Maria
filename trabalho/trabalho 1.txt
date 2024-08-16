@@ -1,0 +1,164 @@
+#include <stdio.h>
+
+double Soma(double a, double b);
+double Subtracao(double a, double b);
+double Multiplicaco(double a, double b);
+double Divisao(double a, double b);
+double Exponenciacao(double a, int b);
+double Raiz(double a);
+int Fatorial(int a);
+int MDC(int a , int b);
+int main()
+{
+
+    int escolha = 0, expoente = 0, fat = 0;
+    double a = 0.0, b = 0.0;
+    do{
+        printf("Escolha uma opcao\n");
+        printf("0. Sair.\n");
+        printf("1. Soma (adição) entre dois números.\n");
+        printf("2. Subtração entre dois números.\n");
+        printf("3. Multiplicação entre dois números.\n");
+        printf("4. Divisão entre dois números.\n");
+        printf("5. Potenciação (exponenciação) de um número por outro.\n");
+        printf("6. Raiz Quadrada de um número.\n");
+        printf("7. Fatorial de um número.\n");
+        printf("8. MDC (Máximo Divisor Comum) entre 5 números.\n");
+        printf("9. MMC (Mínimo Múltiplo Comum) entre 5 números.\n");
+        printf("10. Equação de Segundo Grau.\n");
+        
+        scanf("%d",&escolha);
+        
+        switch(escolha){
+            case 1 :
+                printf("Digite o primeiro numero\n");
+                scanf("%lf",&a);
+                printf("Digite o segundo numero\n");
+                scanf("%lf",&b);
+                printf("Resultado %lf + %lf = %.5lf\n",a,b,Soma(a,b));
+            break;
+            case 2 :
+                printf("Digite o primeiro numero\n");
+                scanf("%lf",&a);
+                printf("Digite o segundo numero\n");
+                scanf("%lf",&b);
+                printf("Resultado %lf - %lf = %.5lf\n",a,b,Subtracao(a,b));
+            break;
+            case 3 :
+                printf("Digite o primeiro numero\n");
+                scanf("%lf",&a);
+                printf("Digite o segundo numero\n");
+                scanf("%lf",&b);
+                printf("Resultado %lf * %lf = %.5lf\n",a,b,Multiplicaco(a,b));
+            break;
+            case 4 :
+                printf("Digite o primeiro numero\n");
+                scanf("%lf",&a);
+                printf("Digite o segundo numero\n");
+                scanf("%lf",&b);
+                if(Divisao(a,b) != 0)
+                printf("Resultado %lf / %lf = %.5lf\n",a,b,Divisao(a,b));
+            break;
+            case 5 :
+                printf("Digite a base\n");
+                scanf("%lf",&a);
+                printf("Digite o expoente\n");
+                scanf("%d",&expoente);
+                printf("Resultado %lf ^ %d = %.5lf\n",a,expoente,Exponenciacao(a,expoente));
+            break;
+            case 6 :
+                printf("Informe o número\n");
+                scanf("%lf",&a);
+                printf("A raiz quadrada de %lf é %.5lf\n",a,Raiz(a));
+            break;
+            case 7 :
+                printf("Informe o número para calcular o fatorial\n");
+                scanf("%d",&fat);
+                printf("O fatorial de %d é %d\n",fat,Fatorial(fat));
+            break;
+            case 8:
+            printf("digite 5 numeros: \n");
+            for (int i = 0; i < 5; i++)
+        {
+            printf("o MDC entre (%d,%d,%d,%d,%d) eh %d\n",numero[0],numero[1],numero[2],numero[3],numero[4],MDCincoNumeros(numero,5));
+            break;
+        }
+        
+    }while(escolha != 0);
+
+    return 0;
+}
+
+double Soma(double a, double b)
+{
+    double resultado = 0.0;
+    resultado = a+b;
+    return (resultado);
+}
+
+double Subtracao(double a, double b)
+{
+    double resultado = 0.0;
+    resultado = a-b;
+    return (resultado);
+}
+
+double Multiplicaco(double a, double b)
+{
+    double resultado = 0.0;
+    resultado = a*b;
+    return (resultado);
+}
+
+double Divisao(double a, double b)
+{
+    double resultado = 0.0;
+    if(b > 0)
+    {
+        resultado = a/b;
+        return (resultado);
+    }else
+    {
+        printf("Impossivel realizar divisão por 0\n");
+        return(0);
+    }
+}
+
+double Exponenciacao(double a, int b)
+{
+    double resultado = 1.0;
+    
+    for (int i = 0; i<b;i++)
+        resultado *= a;
+    return(resultado);
+}
+
+double Raiz(double a)
+{
+    double resultado = 0.0;
+    
+    resultado = 0.5*(a+(a/a));
+    for (int i = 0; i < 50;i++)
+        resultado = 0.5*(resultado+(a/resultado));  
+    return(resultado);
+}
+
+int Fatorial(int a)
+{
+   int resultado = 1;
+   for (int i = 1; i <= a; i++)
+        resultado *= i;
+    return(resultado);
+}
+int calculo MDC (int a , int b );
+while (b != 0) {
+    int resto = a % b;
+    a = b;
+    b =resto;
+
+}
+return a;
+
+
+
+
